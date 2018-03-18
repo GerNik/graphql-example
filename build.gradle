@@ -30,8 +30,9 @@ ext {
 }
 
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-data-mongodb')
+//    compile('org.springframework.boot:spring-boot-starter-data-mongodb')
     compile('org.springframework.boot:spring-boot-starter-web')
+    compile("org.springframework.boot:spring-boot-starter-actuator")
     compile('org.springframework.cloud:spring-cloud-starter-oauth2')
     compile 'com.graphql-java:graphql-spring-boot-starter:3.6.0'
     compile 'com.graphql-java:graphql-java-tools:3.2.0'

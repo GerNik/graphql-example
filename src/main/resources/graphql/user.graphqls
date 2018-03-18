@@ -1,0 +1,16 @@
+type User {
+    id: ID!
+    name: String!
+    lastname: String!
+    middlename: String
+}
+
+#First query
+type Query {
+    getUserById(id: String): User!
+}
+
+#Mutation
+type UserMutation {
+    saveUser(name: String!, lastName: String!,  middleName: String!): User!
+}
