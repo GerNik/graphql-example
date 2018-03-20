@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import ru.gernik.graphql.dao.User;
 import ru.gernik.graphql.dao.UserDao;
-import ru.gernik.graphql.mutation.UserMutation;
+import ru.gernik.graphql.mutation.Mutation;
 import ru.gernik.graphql.query.Query;
 import ru.gernik.graphql.resolver.UserResolver;
 
@@ -39,7 +39,7 @@ public class GraphqlConfiguration {
     }
 
     @Bean
-    public UserMutation userMutation(UserDao userDao) {
-        return new UserMutation(userDao);
+    public Mutation userMutation(UserDao userDao) {
+        return new Mutation(userDao);
     }
 }

@@ -1,0 +1,8 @@
+server:
+    port:8000
+spring:
+  data:
+    mongodb:
+      database: qraphql
+      host: localhost
+      port: 28000

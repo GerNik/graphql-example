@@ -15,7 +15,7 @@ public class UserDao {
                 .findFirst();
     }
 
-    private void saveUser(User user) {
+    public void saveUser(User user) {
         users.add(user);
     }
 }

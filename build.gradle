@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '2.0.0.RELEASE'
+        springBootVersion = '1.5.10.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -26,17 +26,19 @@ repositories {
 
 
 ext {
-    springCloudVersion = 'Finchley.M8'
+    springCloudVersion = 'Edgware.SR2'
 }
 
 dependencies {
-//    compile('org.springframework.boot:spring-boot-starter-data-mongodb')
+    compile('org.springframework.boot:spring-boot-starter-data-mongodb')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile("org.springframework.boot:spring-boot-starter-actuator")
     compile('org.springframework.cloud:spring-cloud-starter-oauth2')
-    compile 'com.graphql-java:graphql-spring-boot-starter:3.6.0'
-    compile 'com.graphql-java:graphql-java-tools:3.2.0'
+    compile 'com.graphql-java:graphql-spring-boot-starter:3.10.0'
+    compile 'com.graphql-java:graphiql-spring-boot-starter:3.10.0'
+    compile 'com.graphql-java:graphql-java-tools:4.3.0'
     compile 'org.projectlombok:lombok:1.16.20'
+    compile 'javax.xml.bind:jaxb-api:2.3.0'
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

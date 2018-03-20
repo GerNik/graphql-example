@@ -11,6 +11,6 @@ type Query {
 }
 
 #Mutation
-type UserMutation {
+type Mutation {
     saveUser(name: String!, lastName: String!,  middleName: String!): User!
 }

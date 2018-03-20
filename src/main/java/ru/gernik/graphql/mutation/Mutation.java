@@ -8,7 +8,7 @@ import ru.gernik.graphql.dao.UserDao;
 import java.util.UUID;
 
 @AllArgsConstructor
-public class UserMutation implements GraphQLMutationResolver {
+public class Mutation implements GraphQLMutationResolver {
 
     private UserDao userDao;
 
@@ -19,6 +19,7 @@ public class UserMutation implements GraphQLMutationResolver {
                 .lastname(lastName)
                 .middlename(middleName)
                 .build();
+        userDao.saveUser(user);
         return user;
     }
 }
