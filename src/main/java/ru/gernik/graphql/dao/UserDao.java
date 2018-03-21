@@ -1,6 +1,7 @@
 package ru.gernik.graphql.dao;
 
 import lombok.AllArgsConstructor;
+import ru.gernik.graphql.model.User;
 
 import java.util.List;
 import java.util.Optional;

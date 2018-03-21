@@ -5,4 +5,4 @@ spring:
     mongodb:
       database: qraphql
       host: localhost
-      port: 28000
+      port: 27018

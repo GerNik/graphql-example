@@ -5,12 +5,14 @@ type User {
     middlename: String
 }
 
-#First query
+#query
 type Query {
-    getUserById(id: String): User!
+    getUser(id: String!): User!
 }
 
 #Mutation
 type Mutation {
     saveUser(name: String!, lastName: String!,  middleName: String!): User!
+
+    updateUser(user: User!): User!
 }
