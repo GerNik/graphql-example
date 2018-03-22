@@ -8,11 +8,15 @@ type User {
 #query
 type Query {
     getUser(id: String!): User!
+
+    getAllUsers: [User]
 }
 
 #Mutation
 type Mutation {
     saveUser(name: String!, lastName: String!,  middleName: String!): User!
 
-    updateUser(user: User!): User!
+    updateUser(id: String!, lastName: String!, name: String!, middleName: String): User!
+
+    deleteUser(id: String!): Boolean!
 }

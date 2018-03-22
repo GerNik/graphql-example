@@ -1,16 +1,10 @@
 package ru.gernik.graphql.resolver;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
-import ru.gernik.graphql.model.User;
-import ru.gernik.graphql.dao.UserDao;
 import ru.gernik.graphql.repository.CarRepository;
 import ru.gernik.graphql.repository.UserRepository;
-
-import java.util.UUID;
+import ru.gernik.graphql.repository.model.User;
 
 @RequiredArgsConstructor
 public class Mutation implements GraphQLMutationResolver {
@@ -26,13 +20,17 @@ public class Mutation implements GraphQLMutationResolver {
         return user;
     }
 
-    public User updateUser(User updUser) {
-        userRepository.save(updUser);
-        return updUser;
+    public User updateUser(String id, String lastName, String name, String middleName) {
+        User user = userRepository.findUserById(id).orElseThrow(RuntimeException::new);
+        userRepository.save(user.setLastname(lastName)
+                .setName(name)
+                .setMiddlename(middleName));
+        return user;
     }
 
-    public void deleteUser(String id) {
+    public boolean deleteUser(String id) {
         userRepository.delete(id);
+        return true;
     }
 
 

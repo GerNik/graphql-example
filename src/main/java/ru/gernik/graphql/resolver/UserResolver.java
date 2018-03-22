@@ -2,9 +2,8 @@ package ru.gernik.graphql.resolver;
 
 import com.coxautodev.graphql.tools.GraphQLResolver;
 import lombok.AllArgsConstructor;
-import ru.gernik.graphql.model.User;
-import ru.gernik.graphql.dao.UserDao;
 import ru.gernik.graphql.repository.UserRepository;
+import ru.gernik.graphql.repository.model.User;
 
 import java.util.Optional;
 

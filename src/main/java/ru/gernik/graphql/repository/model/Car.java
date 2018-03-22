@@ -1,4 +1,4 @@
-package ru.gernik.graphql.model;
+package ru.gernik.graphql.repository.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,7 +1,7 @@
 package ru.gernik.graphql.repository;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
-import ru.gernik.graphql.model.User;
+import ru.gernik.graphql.repository.model.User;
 
 import java.util.Optional;
 
