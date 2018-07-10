@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  backend:
+    container_name: graphql-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:8000
+
+  mongo:
+    build: mongodb
+    ports:
+      - 27018:27017
